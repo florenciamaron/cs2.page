@@ -169,3 +169,16 @@ p {       /* Sangría en la primera línea */
   margin-bottom: 1.5em;   /* Espacio entre párrafos */
   margin-top: 0;          /* Evita que los márgenes se dupliquen */
 }
+/* Esto se activa solo en pantallas de menos de 600px (celulares) */
+@media (max-width: 600px) {
+  .rank-gallery img, 
+  figure img {
+    width: 90%; /* Hace que la imagen ocupe el 90% del ancho de la pantalla */
+    border-radius: 8px; /* Opcional: le da un toque más moderno con bordes redondeados */
+  }
+}
+figure {
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Centra también el texto del figcaption */
+}
