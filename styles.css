@@ -181,11 +181,14 @@ figure {
   padding: 10;
   text-align: center; /* Centra también el texto del figcaption */
 }
-/* Esto solo afecta a celulares */
+
+/* Esto afectará a las imágenes dentro de etiquetas <figure> o con clases de galería */
 @media (max-width: 600px) {
-    .rank-gallery img, 
-    figure img {
-        width: 100%; /* Fuerza a la imagen a ocupar todo el ancho disponible */
-        max-width: 400px; /* Pero evita que se pixele si la pantalla es muy grande */
+    figure img, .rank-gallery img {
+        width: 80% !important; /* Aumenta el tamaño al 80% del ancho de la pantalla */
+        max-width: 350px;      /* Pero no deja que crezca tanto como para verse mal */
+        height: auto;
+        margin: 10px auto;     /* La mantiene centrada */
+        display: block;
     }
 }
