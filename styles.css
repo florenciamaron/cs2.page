@@ -169,16 +169,23 @@ p {       /* Sangría en la primera línea */
   margin-bottom: 1.5em;   /* Espacio entre párrafos */
   margin-top: 0;          /* Evita que los márgenes se dupliquen */
 }
-/* Esto se activa solo en pantallas de menos de 600px (celulares) */
-@media (max-width: 600px) {
-  .rank-gallery img, 
-  figure img {
-    width: 90%; /* Hace que la imagen ocupe el 90% del ancho de la pantalla */
-    border-radius: 8px; /* Opcional: le da un toque más moderno con bordes redondeados */
-  }
+
+img {
+    max-width: 100%; /* Evita que la imagen sea más grande que la pantalla */
+    height: auto;    /* Mantiene la proporción original */
+    display: block;  /* Ayuda a centrar la imagen */
+    margin: 20px auto; /* Centra la imagen y le da espacio arriba y abajo */
 }
 figure {
   margin: 0;
-  padding: 0;
+  padding: 10;
   text-align: center; /* Centra también el texto del figcaption */
+}
+/* Esto solo afecta a celulares */
+@media (max-width: 600px) {
+    .rank-gallery img, 
+    figure img {
+        width: 100%; /* Fuerza a la imagen a ocupar todo el ancho disponible */
+        max-width: 400px; /* Pero evita que se pixele si la pantalla es muy grande */
+    }
 }
